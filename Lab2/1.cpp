@@ -2,7 +2,7 @@
 задавая сначала размер массива, далее его значения.*/
 #include <iostream>
 using namespace std;
-
+//23432424
 int main(){
     int m[1000];
     int size_m, temp;
