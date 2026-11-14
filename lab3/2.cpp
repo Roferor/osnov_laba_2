@@ -18,10 +18,12 @@ double calculate(double a, double b, char op){
             return a / b;
         default:
             cout << "Действие выбрано неверно" << endl;
+            exit(0);
     }
 }
 
 int main(){
+    setlocale(LC_ALL,"ru-RU.UTF8");
     double a,b;
     char op;
     cout << "Каклькулятор" << endl;
@@ -36,6 +38,13 @@ int main(){
 
     cout << "Введите второе число:";
     while(!(cin >> b)){
+        cout << "Неверный ввод";
+        cin.ignore();
+        cin.clear();
+    }
+
+    cout << "Введите действие которое нужно совершить(+, -, *, /):";
+    while(!(cin >> op)){
         cout << "Неверный ввод";
         cin.ignore();
         cin.clear();
